@@ -1,0 +1,3 @@
+sudo rpm --import https://www.mongodb.org/static/pgp/server-3.2.asc
+sudo yum install -y mongodb-org
+
