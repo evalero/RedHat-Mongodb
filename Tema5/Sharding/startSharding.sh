@@ -5,11 +5,11 @@ mkdir -p /data/configdb2
 mkdir -p /data/configdb3
 
 #Start Config Server
-mongod --configsvr --replSet config --dbpath /data/configdb1 --port 27019 --noprealloc --nojournal &
-mongod --configsvr --replSet config --dbpath /data/configdb2 --port 27029 --noprealloc --nojournal &
-mongod --configsvr --replSet config --dbpath /data/configdb3 --port 27039 --noprealloc --nojournal &
+mongod --configsvr --replSet config --dbpath /data/configdb1 --port 27019 --noprealloc  &
+mongod --configsvr --replSet config --dbpath /data/configdb2 --port 27029 --noprealloc  &
+mongod --configsvr --replSet config --dbpath /data/configdb3 --port 27039 --noprealloc  &
 
-sleep 5
+sleep 10
 
 mongo --port 27019 createRSConfig.js &
 
