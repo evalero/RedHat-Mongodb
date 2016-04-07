@@ -11,6 +11,7 @@ mongod --replSet RS1 --dbpath /data/RS1_3 --port 27019 --noprealloc --nojournal 
 
 #initiate replica set for each shard
 sleep 2
-mongo --shell createRS1.js &
+mongo  createRS1.js 
 #Populate replication database
-mongo --shell populateDB.js
+sleep 10
+mongo  populateDB.js
