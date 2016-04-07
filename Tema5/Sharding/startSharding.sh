@@ -19,8 +19,8 @@ mongod --shardsvr --replSet RS2 --dbpath /data/shard2 --port 27028 --noprealloc 
 
 #initiate replica set for each shard
 sleep 2
-mongo --port 27018 --shell createRS1.js &
-mongo --port 27028 --shell createRS2.js &
+mongo --port 27018  createRS1.js &
+mongo --port 27028  createRS2.js &
 
 #Start mongos
 echo "waiting 5 secs to starting config servers after starting mongos"
