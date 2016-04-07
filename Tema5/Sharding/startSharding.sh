@@ -6,8 +6,8 @@ mkdir -p /data/configdb3
 
 #Start Config Server
 mongod --configsvr --replSet config --dbpath /data/configdb1 --port 27019 &
-mongod --configsvr ---replSet config -dbpath /data/configdb2 --port 27029 &
-mongod --configsvr ---replSet config -dbpath /data/configdb3 --port 27039 &
+mongod --configsvr --replSet config --dbpath /data/configdb2 --port 27029 &
+mongod --configsvr --replSet config --dbpath /data/configdb3 --port 27039 &
 
 sleep 5
 
