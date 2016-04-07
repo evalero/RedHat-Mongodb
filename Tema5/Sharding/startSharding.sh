@@ -9,8 +9,9 @@ mongod --configsvr --replSet config --dbpath /data/configdb1 --port 27019 &
 mongod --configsvr ---replSet config -dbpath /data/configdb2 --port 27029 &
 mongod --configsvr ---replSet config -dbpath /data/configdb3 --port 27039 &
 
+sleep 5
+
 mongo --port 27019 createRSConfig.js &
-sleep 2
 
 #Create path for shard servers
 mkdir -p /data/shard1
