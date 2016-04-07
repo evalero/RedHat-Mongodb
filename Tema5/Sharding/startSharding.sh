@@ -25,7 +25,7 @@ mongo --port 27028 --shell createRS2.js &
 #Start mongos
 echo "waiting 5 secs to starting config servers after starting mongos"
 sleep 5
-mongos --configdb paradigma:27019,paradigma:27029,paradigma:27039 &
+mongos --configdb mongodb:27019,mongodb:27029,mongodb:27039 &
 
 
 #add shards to shard cluster
