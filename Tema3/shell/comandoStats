@@ -1,3 +1,4 @@
+use miBD
 db.stats()
 db.muchosDatos.find({x:{$gte:1040}},{y:1})
 db.muchosDatos.find({x:{$gte:1040}},{y:1}).explain()
@@ -8,5 +9,6 @@ db.muchosDatos.find({x:{$gte:1040}},{y:1})
 db.muchosDatos.find({x:{$gte:1040}},{y:1}).explain()
 
 db.setProfilingLevel(2)
- db.system.profile.find()
+db.muchosDatos.insert({“mensaje”:”Este mensaje va a ser traceado”})
+db.system.profile.find()
 
