@@ -6,5 +6,3 @@ config = {
 };
 db=db.getSiblingDB("admin");
 db.runCommand({replSetInitiate: config});
-exit(0);
-
