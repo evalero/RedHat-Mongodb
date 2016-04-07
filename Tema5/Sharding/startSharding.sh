@@ -5,9 +5,9 @@ mkdir -p /data/configdb2
 mkdir -p /data/configdb3
 
 #Start Config Server
-mongod --configsvr --dbpath /data/configdb1 --port 27019 &
-mongod --configsvr --dbpath /data/configdb2 --port 27029 &
-mongod --configsvr --dbpath /data/configdb3 --port 27039 &
+mongod --configsvr --replSet config --dbpath /data/configdb1 --port 27019 &
+mongod --configsvr ---replSet config -dbpath /data/configdb2 --port 27029 &
+mongod --configsvr ---replSet config -dbpath /data/configdb3 --port 27039 &
 
 #Create path for shard servers
 mkdir -p /data/shard1
